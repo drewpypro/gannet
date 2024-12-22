@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: gannet-virtual-service
+  namespace: gannet-namespace
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - istio-system/ingress-gateway
+  http:
+    - match:
+        - port: 30080
+          uri:
+            prefix: "/gannet"
+      rewrite:
+        uri: "/index.html"
+      route:
+        - destination:
+            host: gannet
+            port:
+              number: 80

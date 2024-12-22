@@ -20,5 +20,3 @@ spec:
         image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/gannet:latest
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: ghcr-secret
