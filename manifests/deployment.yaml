@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gannet
+  namespace: gannet-namespace
+  labels:
+    app: gannet
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gannet
+  template:
+    metadata:
+      labels:
+        app: gannet
+    spec:
+      containers:
+      - name: gannet
+        image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/gannet:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: ghcr-secret
