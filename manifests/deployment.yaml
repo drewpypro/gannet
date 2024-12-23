@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: gannet
-        image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/gannet:latest
+        image: ghcr.io/drewpypro/gannet:latest
         ports:
         - containerPort: 80
