@@ -9,7 +9,7 @@ spec:
   gateways:
     - istio-system/ingress-gateway
   http:
-      route:
+      - route:
         - destination:
             host: gannet
             port:
