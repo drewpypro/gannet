@@ -15,6 +15,8 @@ spec:
       labels:
         app: gannet
     spec:
+      nodeSelector:
+        role: worker
       containers:
       - name: gannet
         image: ghcr.io/drewpypro/gannet:latest
