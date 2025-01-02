@@ -5,7 +5,7 @@ metadata:
   namespace: gannet-namespace
 spec:
   hosts:
-    - gannet.drewpy.pro
+    - gannet-test.drewpy.pro
   gateways:
     - istio-ingress/ingress-gateway
   http:
